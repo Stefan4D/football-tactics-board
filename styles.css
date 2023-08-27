@@ -1,0 +1,17 @@
+.pitch {
+  background-color: green;
+  height: 500px;
+  width: 500px;
+}
+
+.draggable {
+  position: absolute;
+  left: 35%;
+  top: 10%;
+  height: 2rem;
+  width: 2rem;
+  cursor: move;
+  background-color: purple;
+  border: 4px solid white;
+  border-radius: 50%;
+}
