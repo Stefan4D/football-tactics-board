@@ -1,5 +1,6 @@
 const field = document.querySelector(".pitch");
 const players = document.querySelectorAll(".draggable");
+const pitch = document.querySelector(".pitch");
 let offsetX, offsetY;
 
 function move(e) {
@@ -16,6 +17,14 @@ players.forEach((player) =>
   })
 );
 
+function createPlayer() {
+  const newPlayer = document.createElement("div");
+  newPlayer.classList.add("draggable");
+  pitch.appendChild(newPlayer);
+}
+
 document.addEventListener("mouseup", () => {
   document.removeEventListener("mousemove", move);
 });
+
+document.addEventListener("click", createPlayer);
