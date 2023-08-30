@@ -9,6 +9,10 @@ function move(e) {
   e.target.style.top = `${e.clientY - offsetY}px`;
 }
 
+function handleDrag() {
+  // add implementation here and refactor players.forEach implementation
+}
+
 players.forEach((player) =>
   player.addEventListener("mousedown", (e) => {
     offsetX = e.clientX - player.offsetLeft;
@@ -20,6 +24,8 @@ players.forEach((player) =>
 function createPlayer() {
   const newPlayer = document.createElement("div");
   newPlayer.classList.add("draggable");
+  // add event listener
+
   pitch.appendChild(newPlayer);
 }
 
@@ -27,4 +33,4 @@ document.addEventListener("mouseup", () => {
   document.removeEventListener("mousemove", move);
 });
 
-document.addEventListener("click", createPlayer);
+// document.addEventListener("click", createPlayer);
